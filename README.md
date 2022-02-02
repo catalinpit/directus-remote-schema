@@ -10,10 +10,11 @@ After creating the Directus application, you can access the GraphQL API endpoint
 https://<your-project-name>.directus.app/graphql
 ```
 
-It’s important to note that all data is accessible only to authenticated users. There are three ways to access data:
-* make your data public
+It’s important to note that all data is accessible only to authenticated users. There are two ways to access data:
 * use JWTs
 * use static tokens (set for each user) which do not expire
+
+Alternatively, you can make your data public and expose it to unauthenticated users.
 
 ### Make Data Public
 
