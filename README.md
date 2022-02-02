@@ -11,8 +11,8 @@ https://<your-project-name>.directus.app/graphql
 ```
 
 It’s important to note that all data is accessible only to authenticated users. There are two ways to access data:
-* use JWTs
-* use static tokens (set for each user) which do not expire
+* using JWTs
+* using static tokens that are set for each user and do not expire
 
 Alternatively, you can make your data public and expose it to unauthenticated users.
 
@@ -26,11 +26,11 @@ Once you are there, click on the **Public** role.
 
 A new page opens where you can set the permissions for all your collections. 
 
-Identify your collection and the permission you want to update. At the top, you can see various icons that represent operations (INSERT, READ, etc).
+Identify your collection and the permission you want to update. At the top, you can see various icons that represent operations such as INSERT, READ, etc.
 
-After that, click on the red symbol and choose **All Access**, and you are done.
+Click on the red symbol and choose **All Access** for the selected operation. The changes save automatically, so you are done.
 
-Alternatively, you can hover over the collection name, and two options will appear where you can instantly make it public/private.
+**Note**: You can hover over the collection name, and two options will appear where you can instantly make it public (*All*)/private (*None*).
 
 ![Directus Set Public Permissions](https://raw.githubusercontent.com/catalinpit/directus-remote-schema/main/images/directus-set-public-permissions.png)
 
@@ -56,11 +56,11 @@ Go to the **Roles & Permissions** page in your project’s dashboard and choose 
 
 ![Directus Roles and Permissions](https://raw.githubusercontent.com/catalinpit/directus-remote-schema/main/images/directus-roles-permissions.png)
 
-Now select the permissions. For this example, all the users can see the articles and products.
+Now select the permissions. All the users assigned the **Temps** role should only see the articles and products. Change the permissions to reflect that.
 
 ![Directus Temps Role Permissions](https://raw.githubusercontent.com/catalinpit/directus-remote-schema/main/images/directus-temps-role-permissions.png)
 
-Scroll to the bottom of the page until you see the field **Users in Role**. Create a new user or add an existing one.
+Now, scroll to the bottom of the page until you see **Users in Role**. Create a new user or add an existing one.
 
 ![Directus Temps Select User](https://raw.githubusercontent.com/catalinpit/directus-remote-schema/main/images/directus-temps-role-user.png)
 
@@ -80,6 +80,6 @@ Replace `myExampleToken` with your token and save it. You are done, and you can 
 
 ### (Optional) Use Temporary Token (JWT)
 
-A `Temporary Token` is returned by the login endpoint/mutation and has a short expiration time. Since it has a short expiration time, you need to get a new token every once in a while. As a result, it’s more challenging to use a temporary token because you will need to update the remote schema with the new token each time.
+A `Temporary Token` is returned by the login endpoint/mutation and has a short expiration time. Since it has a short expiration time, you need to get a new token every once in a while. As a result, it’s more challenging to use a temporary token because you will need to update the Remote Schema with the new token each time.
 
 Check the [documentation](https://docs.directus.io/reference/authentication/) for more information.
